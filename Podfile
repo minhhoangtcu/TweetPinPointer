@@ -8,6 +8,8 @@ target 'TweetPinPointer' do
   # Pods for TweetPinPointer
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
   target 'TweetPinPointerTests' do
     inherit! :search_paths
