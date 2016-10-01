@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct APIKeys {
-    let GoogleMapsAPIKey = "AIzaSyCNoUYL9Wm4L9SQkpuAJaKXSYLtHhAbLXc"
+struct Constants {
+    
+    struct APIKeys {
+        static let GoogleMapsAPIKey = "AIzaSyCNoUYL9Wm4L9SQkpuAJaKXSYLtHhAbLXc"
+    }
+    
 }
