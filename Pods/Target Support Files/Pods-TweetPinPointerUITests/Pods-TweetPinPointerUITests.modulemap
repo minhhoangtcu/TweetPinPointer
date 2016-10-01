@@ -1,0 +1,6 @@
+framework module Pods_TweetPinPointerUITests {
+  umbrella header "Pods-TweetPinPointerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

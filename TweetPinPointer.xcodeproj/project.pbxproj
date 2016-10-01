@@ -241,6 +241,7 @@
 				TargetAttributes = {
 					B896EFA51DA02D400094DA89 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B43REW4B7B;
 						ProvisioningStyle = Automatic;
 					};
 					B896EFB91DA02D400094DA89 = {
@@ -584,6 +585,7 @@
 			baseConfigurationReference = 85263629FA1C21A7341484AF /* Pods-TweetPinPointer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B43REW4B7B;
 				INFOPLIST_FILE = TweetPinPointer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.mhoang.TweetPinPointer;
@@ -597,6 +599,7 @@
 			baseConfigurationReference = 5AABF6C249C4B14ACD95DAAB /* Pods-TweetPinPointer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B43REW4B7B;
 				INFOPLIST_FILE = TweetPinPointer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.mhoang.TweetPinPointer;
