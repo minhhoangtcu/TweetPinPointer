@@ -10,6 +10,7 @@
 		8D46B00335F59303DD750C78 /* Pods_TweetPinPointerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE85FD9F81671D4C1030CBB /* Pods_TweetPinPointerUITests.framework */; };
 		B80A4B281DA07048007BFF99 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80A4B271DA07048007BFF99 /* Constant.swift */; };
 		B80FED1D1DA09D48006B4F21 /* MarkerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */; };
+		B80FED1F1DA09FB4006B4F21 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED1E1DA09FB4006B4F21 /* Tweet.swift */; };
 		B896EFAA1DA02D400094DA89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896EFA91DA02D400094DA89 /* AppDelegate.swift */; };
 		B896EFAC1DA02D400094DA89 /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896EFAB1DA02D400094DA89 /* MapsController.swift */; };
 		B896EFAF1DA02D400094DA89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B896EFAD1DA02D400094DA89 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		8EF9AAD8EF61923EB907A71D /* Pods-TweetPinPointerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetPinPointerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TweetPinPointerTests/Pods-TweetPinPointerTests.release.xcconfig"; sourceTree = "<group>"; };
 		B80A4B271DA07048007BFF99 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerCreator.swift; sourceTree = "<group>"; };
+		B80FED1E1DA09FB4006B4F21 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		B896EFA61DA02D400094DA89 /* TweetPinPointer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetPinPointer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B896EFA91DA02D400094DA89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B896EFAB1DA02D400094DA89 /* MapsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				B896EFB51DA02D400094DA89 /* Info.plist */,
 				B80A4B271DA07048007BFF99 /* Constant.swift */,
 				B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */,
+				B80FED1E1DA09FB4006B4F21 /* Tweet.swift */,
 			);
 			path = TweetPinPointer;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B80FED1D1DA09D48006B4F21 /* MarkerCreator.swift in Sources */,
+				B80FED1F1DA09FB4006B4F21 /* Tweet.swift in Sources */,
 				B896EFAC1DA02D400094DA89 /* MapsController.swift in Sources */,
 				B896EFAA1DA02D400094DA89 /* AppDelegate.swift in Sources */,
 				B80A4B281DA07048007BFF99 /* Constant.swift in Sources */,

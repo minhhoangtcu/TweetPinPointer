@@ -19,4 +19,8 @@ class MarkerCreator {
         marker.map = mapView
     }
     
+    func createMaker(onMap mapView: GMSMapView, withTweet tweet: Tweet) {
+        // do stuff
+    }
+    
 }
