@@ -24,6 +24,7 @@ struct Constants {
         static let ClintonHappy = "ClintonHappy"
         static let ClintonSad = "ClintonSad"
         static let Marker = "Marker"
+        static let InfoButton = "InfoButton"
     }
     
     static let testTweet1 = Tweet(

@@ -25,6 +25,10 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         if (userLati == nil && userLong == nil) {
             determineMyCurrentLocation()
         }
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: Constants.ImageNames.InfoButton),
+                                                            style: .plain,
+                                                            target: self, action: #selector(infoButtonPressed))
+        navigationItem.rightBarButtonItem?.tintColor = .black
     }
     
     // MARK: Determine current location once.
@@ -77,6 +81,10 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         performSegue(withIdentifier: Constants.SegueIdentifiers.ToInfo, sender: marker)
         return true
+    }
+    
+    func infoButtonPressed() {
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

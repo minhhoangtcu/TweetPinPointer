@@ -21,7 +21,7 @@ class MarkerCreator {
         customMarker.changeInterface(isTrump: tweet.isTrump, isPositive: tweet.isPositive)
         // change the color of the text for neg/pos
         
-        let icon = UIImage(named: "Marker")!
+        let icon = UIImage(named: Constants.ImageNames.Marker)!
         
         // Create container
         let annotationImage = UIView.init(frame: CGRect(x: 0, y: 0, width: customMarker.frame.size.width, height: customMarker.frame.size.height + icon.size.height))
