@@ -9,6 +9,7 @@
 import Foundation
 
 struct Constants {
+    static let API_URL = "https://safe-beach-68088.herokuapp.com"
     
     struct APIKeys {
         static let GoogleMapsAPIKey = "AIzaSyCNoUYL9Wm4L9SQkpuAJaKXSYLtHhAbLXc"
