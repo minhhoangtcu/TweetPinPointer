@@ -79,12 +79,12 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         mapView.delegate = self
         view = mapView
         
-        // Test data
-        markerCreator.mapView = mapView
-        markerCreator.createMaker(withTweet: Constants.testTweet1)
-        markerCreator.createMaker(withTweet: Constants.testTweet2)
-        markerCreator.createMaker(withTweet: Constants.testTweet3)
-        markerCreator.createMaker(withTweet: Constants.testTweet4)
+        TweetDataSource.loadTweets(lat: userLati, lng: userLong) {(tweets: [Tweet]) in
+            self.markerCreator.mapView = mapView
+            for tweet in tweets {, lat: self.userLati, lng: self.userLong
+                self.markerCreator.createMaker(withTweet: tweet)
+            }
+        }
     }
     
     
