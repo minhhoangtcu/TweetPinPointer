@@ -65,12 +65,15 @@ class MapsController: UIViewController, CLLocationManagerDelegate {
     }
     
     func loadMapWithCurrentLocation() {
-        let camera = GMSCameraPosition.camera(withLatitude: userLati, longitude: userLong, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: userLati, longitude: userLong, zoom: 15.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.delegate = mapsDelegate
         view = mapView
         markerCreator.mapView = mapView
         markerCreator.createMaker(withTweet: Constants.testTweet1)
+        markerCreator.createMaker(withTweet: Constants.testTweet2)
+        markerCreator.createMaker(withTweet: Constants.testTweet3)
+        markerCreator.createMaker(withTweet: Constants.testTweet4)
     }
 }
