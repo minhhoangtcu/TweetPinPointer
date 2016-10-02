@@ -11,6 +11,9 @@
 		B80A4B281DA07048007BFF99 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80A4B271DA07048007BFF99 /* Constant.swift */; };
 		B80FED1D1DA09D48006B4F21 /* MarkerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */; };
 		B80FED1F1DA09FB4006B4F21 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED1E1DA09FB4006B4F21 /* Tweet.swift */; };
+		B80FED211DA0A638006B4F21 /* TweetInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80FED201DA0A638006B4F21 /* TweetInfoWindow.xib */; };
+		B80FED231DA0A8A9006B4F21 /* TweetInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED221DA0A8A9006B4F21 /* TweetInfoWindow.swift */; };
+		B80FED251DA0AC53006B4F21 /* NibLoadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED241DA0AC53006B4F21 /* NibLoadExtension.swift */; };
 		B896EFAA1DA02D400094DA89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896EFA91DA02D400094DA89 /* AppDelegate.swift */; };
 		B896EFAC1DA02D400094DA89 /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896EFAB1DA02D400094DA89 /* MapsController.swift */; };
 		B896EFAF1DA02D400094DA89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B896EFAD1DA02D400094DA89 /* Main.storyboard */; };
@@ -50,6 +53,9 @@
 		B80A4B271DA07048007BFF99 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerCreator.swift; sourceTree = "<group>"; };
 		B80FED1E1DA09FB4006B4F21 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		B80FED201DA0A638006B4F21 /* TweetInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetInfoWindow.xib; sourceTree = "<group>"; };
+		B80FED221DA0A8A9006B4F21 /* TweetInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetInfoWindow.swift; sourceTree = "<group>"; };
+		B80FED241DA0AC53006B4F21 /* NibLoadExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadExtension.swift; sourceTree = "<group>"; };
 		B896EFA61DA02D400094DA89 /* TweetPinPointer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetPinPointer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B896EFA91DA02D400094DA89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B896EFAB1DA02D400094DA89 /* MapsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
@@ -138,7 +144,10 @@
 				B896EFB51DA02D400094DA89 /* Info.plist */,
 				B80A4B271DA07048007BFF99 /* Constant.swift */,
 				B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */,
+				B80FED201DA0A638006B4F21 /* TweetInfoWindow.xib */,
+				B80FED221DA0A8A9006B4F21 /* TweetInfoWindow.swift */,
 				B80FED1E1DA09FB4006B4F21 /* Tweet.swift */,
+				B80FED241DA0AC53006B4F21 /* NibLoadExtension.swift */,
 			);
 			path = TweetPinPointer;
 			sourceTree = "<group>";
@@ -293,6 +302,7 @@
 				B896EFB41DA02D400094DA89 /* LaunchScreen.storyboard in Resources */,
 				B896EFB11DA02D400094DA89 /* Assets.xcassets in Resources */,
 				B896EFAF1DA02D400094DA89 /* Main.storyboard in Resources */,
+				B80FED211DA0A638006B4F21 /* TweetInfoWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +451,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B80FED1D1DA09D48006B4F21 /* MarkerCreator.swift in Sources */,
+				B80FED231DA0A8A9006B4F21 /* TweetInfoWindow.swift in Sources */,
+				B80FED251DA0AC53006B4F21 /* NibLoadExtension.swift in Sources */,
 				B80FED1F1DA09FB4006B4F21 /* Tweet.swift in Sources */,
 				B896EFAC1DA02D400094DA89 /* MapsController.swift in Sources */,
 				B896EFAA1DA02D400094DA89 /* AppDelegate.swift in Sources */,

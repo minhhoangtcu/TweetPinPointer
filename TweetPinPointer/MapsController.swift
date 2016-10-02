@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class MapsController: UIViewController, CLLocationManagerDelegate {
+class MapsController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
@@ -29,6 +29,10 @@ class MapsController: UIViewController, CLLocationManagerDelegate {
         super.viewWillAppear(animated)
         determineMyCurrentLocation()
     }
+
+    
+    // MARK: Determine current location once.
+
     
     func determineMyCurrentLocation() {
         locationManager = CLLocationManager()
@@ -65,10 +69,24 @@ class MapsController: UIViewController, CLLocationManagerDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: userLati, longitude: userLong, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
+        mapView.delegate = self
         view = mapView
         
         // create marker here
         markerCreator.createMarker(onMap: mapView, latitude: userLati, longitude: userLong)
+    }
+    
+    // MARK: Delegate of InfoWindow. Change its behavior
+    
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        let customMarker: TweetInfoWindow = TweetInfoWindow.loadFromNib()
+        customMarker.text.text = marker.title
+        print("here")
+        return customMarker
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        print("tap tap")
     }
     
 }
