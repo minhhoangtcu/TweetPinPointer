@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--tweet analyzer-->
+        <!--Tweets of Joy and Fury 2016-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapsController" customModule="TweetPinPointer" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="tweet analyzer" id="Duk-Ld-r4M"/>
+                    <navigationItem key="navigationItem" title="Tweets of Joy and Fury 2016" id="Duk-Ld-r4M"/>
                     <connections>
                         <segue destination="37E-JL-PLQ" kind="show" identifier="ShowInfo" id="iQa-22-vZr"/>
                         <segue destination="mly-rB-dWb" kind="show" identifier="ShowAbout" id="ajP-sz-cPf"/>
@@ -50,7 +50,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="write something about the project here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTI-w7-Rbe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTI-w7-Rbe">
+                                <string key="text">Political forecasters are constantly monitoring social media sources like Twitter, using complex analytical tools to predict which states will go to which candidate in 2016.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -62,7 +63,7 @@
                             <constraint firstItem="FTI-w7-Rbe" firstAttribute="top" secondItem="MTm-eh-nla" secondAttribute="bottom" constant="284" id="FVF-RA-xnx"/>
                             <constraint firstItem="pC1-h2-C87" firstAttribute="leading" secondItem="J0x-8u-cFW" secondAttribute="leadingMargin" constant="50" id="FeE-6t-8OY"/>
                             <constraint firstItem="FTI-w7-Rbe" firstAttribute="leading" secondItem="J0x-8u-cFW" secondAttribute="leadingMargin" constant="40" id="HDw-lU-YIo"/>
-                            <constraint firstItem="lBq-xC-Jb8" firstAttribute="top" secondItem="FTI-w7-Rbe" secondAttribute="bottom" constant="200" id="PGd-In-3MD"/>
+                            <constraint firstItem="lBq-xC-Jb8" firstAttribute="top" secondItem="FTI-w7-Rbe" secondAttribute="bottom" constant="100" id="PGd-In-3MD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pC1-h2-C87" secondAttribute="trailing" constant="50" id="V1b-rt-l2w"/>
                             <constraint firstItem="lBq-xC-Jb8" firstAttribute="top" secondItem="pC1-h2-C87" secondAttribute="bottom" constant="330" id="VIJ-2k-heQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KpJ-lN-VQZ" secondAttribute="trailing" constant="45" id="Y8c-aK-Yxl"/>
@@ -200,7 +201,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d3g-5I-00t" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CDE-ed-MzN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CDE-ed-MzN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
