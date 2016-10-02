@@ -109,12 +109,13 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="7ar-vb-tTc" secondAttribute="bottom" constant="50" id="Aya-mU-5fJ"/>
+                                    <constraint firstItem="7ar-vb-tTc" firstAttribute="height" secondItem="LfB-OB-mpj" secondAttribute="height" id="vsX-WN-hNP"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PLe-1B-NPC" firstAttribute="top" secondItem="dBR-bx-YYL" secondAttribute="bottom" constant="200" id="0Uq-yg-yv6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dBR-bx-YYL" secondAttribute="trailing" constant="40" id="2Ar-DP-H0G"/>
                             <constraint firstItem="dBR-bx-YYL" firstAttribute="top" secondItem="cLB-XE-YvH" secondAttribute="bottom" constant="284" id="5WL-4p-sbU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iZq-YS-Sec" secondAttribute="trailing" constant="108" id="6eN-Sf-OZm"/>
@@ -127,9 +128,9 @@
                             <constraint firstItem="dBR-bx-YYL" firstAttribute="centerX" secondItem="I7B-2X-eL4" secondAttribute="centerX" id="QLW-k8-fMs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r7R-0o-B4b" secondAttribute="trailing" constant="40" id="QME-oH-0Lj"/>
                             <constraint firstItem="jiM-P5-ol6" firstAttribute="leading" secondItem="I7B-2X-eL4" secondAttribute="leadingMargin" constant="131" id="c5Q-tM-Wyu"/>
-                            <constraint firstItem="jiM-P5-ol6" firstAttribute="top" secondItem="iZq-YS-Sec" secondAttribute="bottom" constant="16" id="nwG-MQ-YjL"/>
+                            <constraint firstItem="jiM-P5-ol6" firstAttribute="top" secondItem="iZq-YS-Sec" secondAttribute="bottom" constant="20" id="nwG-MQ-YjL"/>
                             <constraint firstItem="dBR-bx-YYL" firstAttribute="leading" secondItem="I7B-2X-eL4" secondAttribute="leadingMargin" constant="40" id="q8F-83-eqA"/>
-                            <constraint firstItem="PLe-1B-NPC" firstAttribute="top" secondItem="iZq-YS-Sec" secondAttribute="bottom" constant="462" id="ro8-Dn-Udi"/>
+                            <constraint firstItem="PLe-1B-NPC" firstAttribute="top" secondItem="iZq-YS-Sec" secondAttribute="bottom" constant="415" id="ro8-Dn-Udi"/>
                         </constraints>
                     </view>
                     <connections>
@@ -152,7 +153,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d3g-5I-00t" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CDE-ed-MzN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CDE-ed-MzN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

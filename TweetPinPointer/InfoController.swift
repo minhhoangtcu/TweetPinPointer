@@ -24,8 +24,9 @@ class InfoController:  UIViewController {
     var tweet: Tweet!
     
     override func viewDidLoad() {
-        borderTop.layer.borderWidth = 1.0
-        borderDown.layer.borderWidth = 1.0
+        borderTop.addBottomBorderWithColor(color: .black, width: 10.0)
+        borderDown.addBottomBorderWithColor(color: .black, width: 10.0)
+        icon.image = getImage(isTrump: tweet.isTrump, isPositive: tweet.isPositive)
     }
     
 }

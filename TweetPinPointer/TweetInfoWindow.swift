@@ -19,18 +19,10 @@ class TweetInfoWindow: UIView {
 //    }
     
     func changeInterface(isTrump: Bool, isPositive: Bool) {
-        switch (isTrump, isPositive) {
-        case (true, true):
-            icon.image = UIImage(named: "TrumpHappy")
+        icon.image = getImage(isTrump: isTrump, isPositive: isPositive)
+        if isPositive {
             text.textColor = .blue
-        case (true, false):
-            icon.image = UIImage(named: "TrumpSad")
-            text.textColor = .red
-        case (false, true):
-            icon.image = UIImage(named: "ClintonHappy")
-            text.textColor = .blue
-        case (false, false):
-            icon.image = UIImage(named: "ClintonSad")
+        } else {
             text.textColor = .red
         }
     }

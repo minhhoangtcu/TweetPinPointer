@@ -18,6 +18,14 @@ struct Constants {
         static let ToInfo = "ShowInfo"
     }
     
+    struct ImageNames {
+        static let TrumpHappy = "TrumpHappy"
+        static let TrumpSad = "TrumpSad"
+        static let ClintonHappy = "ClintonHappy"
+        static let ClintonSad = "ClintonSad"
+        static let Marker = "Marker"
+    }
+    
     static let testTweet1 = Tweet(
         latitude: 30.6124366984386,
         longitude: -96.341572652461,

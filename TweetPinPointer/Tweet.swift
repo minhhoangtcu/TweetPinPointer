@@ -19,3 +19,16 @@ struct Tweet {
     var negativity: Float!
     var isTrump: Bool!
 }
+
+func getImage(isTrump: Bool, isPositive: Bool) -> UIImage {
+    switch (isTrump, isPositive) {
+    case (true, true):
+        return UIImage(named: Constants.ImageNames.TrumpHappy)!
+    case (true, false):
+        return UIImage(named: Constants.ImageNames.TrumpSad)!
+    case (false, true):
+        return UIImage(named: Constants.ImageNames.ClintonHappy)!
+    case (false, false):
+        return UIImage(named: Constants.ImageNames.ClintonSad)!
+    }
+}
