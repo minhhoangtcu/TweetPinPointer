@@ -11,9 +11,19 @@ import GoogleMaps
 
 class MapsController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     var locationManager:CLLocationManager!
     var userLati: CLLocationDegrees!
     var userLong: CLLocationDegrees!
+    var markerCreator: MarkerCreator!
+    
+    override func viewDidLoad() {
+        if (userLati != nil && userLong != nil) {
+            loadMapWithCurrentLocation()
+        }
+        markerCreator = MarkerCreator()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,7 +51,7 @@ class MapsController: UIViewController, CLLocationManagerDelegate {
         
         userLati = userLocation.coordinate.latitude
         userLong = userLocation.coordinate.longitude
-        loadMap()
+        loadMapWithCurrentLocation()
         
         print("user latitude = \(userLocation.coordinate.latitude)")
         print("user longitude = \(userLocation.coordinate.longitude)")
@@ -51,17 +61,14 @@ class MapsController: UIViewController, CLLocationManagerDelegate {
         print("Error \(error)")
     }
     
-    func loadMap() {
+    func loadMapWithCurrentLocation() {
         let camera = GMSCameraPosition.camera(withLatitude: userLati, longitude: userLong, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         view = mapView
         
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        // create marker here
+        markerCreator.createMarker(onMap: mapView, latitude: userLati, longitude: userLong)
     }
     
 }
