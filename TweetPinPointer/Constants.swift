@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import GoogleMaps
+
+var markerToTweet: [GMSMarker: Tweet] = [:]
 
 struct Constants {
     

@@ -38,6 +38,8 @@ struct Tweet {
         longitude = json["lng"].doubleValue
         author = json["user"].stringValue
         text = json["text"].stringValue
+        positivity = json["positivity"].floatValue
+        negativity = json["negativity"].floatValue
         
         let sentiment = json["sentiment"].stringValue
         isPositive = sentiment == "pos"

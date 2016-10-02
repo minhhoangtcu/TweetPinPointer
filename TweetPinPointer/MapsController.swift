@@ -80,13 +80,21 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         view = mapView
     }
     
+    
+    
+    
+    
     func setTweets(_ mapview:GMSMapView, lat:CLLocationDegrees, lng: CLLocationDegrees, radius: CLLocationDistance) {
         TweetDataSource.loadTweets(lat: userLati, lng: userLong, radius: radius) {(tweets: [Tweet]) in
             self.markerCreator.mapView = self.mapView
             self.markerCreator.createMaker(withTweet: tweets)
-            print(tweets)
+            //print(tweets)
         }
     }
+    
+    
+    
+    
     
     
     // MARK: Find radius of current zoom level
@@ -117,7 +125,7 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
             let centerLocation = CLLocation(latitude: position.target.latitude, longitude: position.target.longitude)
             let radius = getRadius(centerLocation: centerLocation)
             print("lati: \t\(position.target.latitude) \tlong: \t\(position.target.longitude) \tradius: \(radius) (m)")
-            mapView.clear()
+//            mapView.clear()
             setTweets(mapView, lat: position.target.latitude, lng: position.target.longitude, radius: radius)
             lastTime = currentTime
         }
@@ -138,7 +146,9 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
             case Constants.SegueIdentifiers.ToInfo:
                 let marker = sender as! GMSMarker
                 let infoController = segue.destination as! InfoController
-                infoController.tweet = marker.tweet
+                infoController.tweet = markerToTweet[marker]
+                print(markerToTweet[marker])
+                //print(marker.tweet)
             case Constants.SegueIdentifiers.ToAbout:
                 break // do nothing. really.
             default:

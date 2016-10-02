@@ -26,14 +26,21 @@ class MarkerCreator {
         iconImageView.backgroundColor = .clear
         iconImageView.frame = CGRect(x: (customMarker.frame.size.width - icon.size.width)/2, y: customMarker.frame.size.height, width: icon.size.width, height: icon.size.height)
         
+        markerToTweet.removeAll()
+        var allMarkers: [GMSMarker] = []
+        
         for tweet in tweets {
+            
             let position = CLLocationCoordinate2DMake(tweet.latitude, tweet.longitude)
             let marker = GMSMarker(position: position)
             
             customMarker.text.text = tweet.text
             customMarker.changeInterface(isTrump: tweet.isTrump, isPositive: tweet.isPositive)
-            marker.tweet = tweet
-            marker.map = mapView
+            
+            markerToTweet[marker] = tweet
+            
+            allMarkers.append(marker)
+            
             annotationImage.addSubview(customMarker)
             annotationImage.addSubview(iconImageView)
 
@@ -49,6 +56,12 @@ class MarkerCreator {
                 marker.icon = renderedIcon
             }
             
+        }
+        
+        // Clear then load
+        mapView.clear()
+        for m in allMarkers {
+            m.map = mapView
         }
     }
 }

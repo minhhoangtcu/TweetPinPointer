@@ -32,8 +32,8 @@ class InfoController:  UIViewController {
         authorLabel.text = tweet.author
         dateLabel.text = tweet.date
         text.text = tweet.text
-        positivityLabel.text = String(tweet.positivity)
-        negativityLabel.text = String(tweet.negativity)
+        if (tweet.positivity != nil) { positivityLabel.text = String(tweet.positivity) }
+        if (tweet.negativity != nil) { negativityLabel.text = String(tweet.negativity) }
     }
     
 }
