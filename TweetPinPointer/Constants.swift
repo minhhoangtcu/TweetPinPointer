@@ -14,6 +14,10 @@ struct Constants {
         static let GoogleMapsAPIKey = "AIzaSyCNoUYL9Wm4L9SQkpuAJaKXSYLtHhAbLXc"
     }
     
+    struct SegueIdentifiers {
+        static let ToInfo = "ShowInfo"
+    }
+    
     static let testTweet1 = Tweet(
         latitude: 30.6124366984386,
         longitude: -96.341572652461,

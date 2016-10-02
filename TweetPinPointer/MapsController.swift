@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class MapsController: UIViewController, CLLocationManagerDelegate {
+class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
 
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
@@ -68,12 +68,33 @@ class MapsController: UIViewController, CLLocationManagerDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: userLati, longitude: userLong, zoom: 15.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
-        mapView.delegate = mapsDelegate
+        mapView.delegate = self
         view = mapView
         markerCreator.mapView = mapView
         markerCreator.createMaker(withTweet: Constants.testTweet1)
         markerCreator.createMaker(withTweet: Constants.testTweet2)
         markerCreator.createMaker(withTweet: Constants.testTweet3)
         markerCreator.createMaker(withTweet: Constants.testTweet4)
+    }
+    
+    
+    // MARK: MAP DELEGATE
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        performSegue(withIdentifier: Constants.SegueIdentifiers.ToInfo, sender: marker)
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indentifier = segue.identifier {
+            switch (indentifier) {
+            case Constants.SegueIdentifiers.ToInfo:
+                let marker = sender as! GMSMarker
+                let infoController = segue.destination as! InfoController
+                infoController.tweet = marker.tweet
+            default:
+            break
+            }
+        }
     }
 }

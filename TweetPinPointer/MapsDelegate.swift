@@ -9,7 +9,7 @@
 import Foundation
 import GoogleMaps
 
-class MapsDelegate: UIViewController, GMSMapViewDelegate {
+class MapsDelegate: UIViewController {
 
 //    NOT NEED ANYMORE BECAUSE WE WILL NEVER HAVE INFO WINDOW
 //    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
@@ -23,11 +23,4 @@ class MapsDelegate: UIViewController, GMSMapViewDelegate {
 //    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
 //        print("tap tap")
 //    }
-    
-    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        
-        
-        
-        return true
-    }
 }

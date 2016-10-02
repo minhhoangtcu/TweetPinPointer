@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D46B00335F59303DD750C78 /* Pods_TweetPinPointerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE85FD9F81671D4C1030CBB /* Pods_TweetPinPointerUITests.framework */; };
-		B80A4B281DA07048007BFF99 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80A4B271DA07048007BFF99 /* Constant.swift */; };
+		B80A4B281DA07048007BFF99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80A4B271DA07048007BFF99 /* Constants.swift */; };
 		B80FED1D1DA09D48006B4F21 /* MarkerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */; };
 		B80FED1F1DA09FB4006B4F21 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED1E1DA09FB4006B4F21 /* Tweet.swift */; };
 		B80FED211DA0A638006B4F21 /* TweetInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80FED201DA0A638006B4F21 /* TweetInfoWindow.xib */; };
@@ -53,7 +53,7 @@
 		6FF2087B94A810D7DB53EE3C /* Pods_TweetPinPointer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetPinPointer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85263629FA1C21A7341484AF /* Pods-TweetPinPointer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetPinPointer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetPinPointer/Pods-TweetPinPointer.debug.xcconfig"; sourceTree = "<group>"; };
 		8EF9AAD8EF61923EB907A71D /* Pods-TweetPinPointerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetPinPointerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TweetPinPointerTests/Pods-TweetPinPointerTests.release.xcconfig"; sourceTree = "<group>"; };
-		B80A4B271DA07048007BFF99 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B80A4B271DA07048007BFF99 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerCreator.swift; sourceTree = "<group>"; };
 		B80FED1E1DA09FB4006B4F21 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		B80FED201DA0A638006B4F21 /* TweetInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetInfoWindow.xib; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				B896EFAB1DA02D400094DA89 /* MapsController.swift */,
 				B896EFAD1DA02D400094DA89 /* Main.storyboard */,
 				B81440D21DA0F285005DE22F /* InfoController.swift */,
-				B80A4B271DA07048007BFF99 /* Constant.swift */,
+				B80A4B271DA07048007BFF99 /* Constants.swift */,
 				B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */,
 				B80FED2A1DA0BCFF006B4F21 /* GMSMarkerExtension.swift */,
 				B80FED1E1DA09FB4006B4F21 /* Tweet.swift */,
@@ -483,7 +483,7 @@
 				B80FED2B1DA0BCFF006B4F21 /* GMSMarkerExtension.swift in Sources */,
 				B896EFAC1DA02D400094DA89 /* MapsController.swift in Sources */,
 				B896EFAA1DA02D400094DA89 /* AppDelegate.swift in Sources */,
-				B80A4B281DA07048007BFF99 /* Constant.swift in Sources */,
+				B80A4B281DA07048007BFF99 /* Constants.swift in Sources */,
 				B81440D31DA0F285005DE22F /* InfoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
