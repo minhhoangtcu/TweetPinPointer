@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ECD28FC62BACD883FB31C6B642176C132A2210C7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "69C1EBB5D49829ABC83F4F6DA51C91560FDBA02F" : 9223372036854775807,
+    "ECD28FC62BACD883FB31C6B642176C132A2210C7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C32915D9-C102-4D7C-B744-E794D4BBEE35",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "69C1EBB5D49829ABC83F4F6DA51C91560FDBA02F" : "TweetPinPointer\/TweetPinPointer\/multipleInfoWindows\/",
+    "ECD28FC62BACD883FB31C6B642176C132A2210C7" : "TweetPinPointer\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TweetPinPointer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TweetPinPointer.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dagostini\/DAMapAnnotation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "69C1EBB5D49829ABC83F4F6DA51C91560FDBA02F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/minhhoangtcu\/TweetPinPointer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ECD28FC62BACD883FB31C6B642176C132A2210C7"
+    }
+  ]
+}
