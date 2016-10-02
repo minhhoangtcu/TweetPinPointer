@@ -16,6 +16,7 @@
 		B80FED251DA0AC53006B4F21 /* NibLoadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED241DA0AC53006B4F21 /* NibLoadExtension.swift */; };
 		B80FED271DA0B96E006B4F21 /* MapsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED261DA0B96E006B4F21 /* MapsDelegate.swift */; };
 		B80FED2B1DA0BCFF006B4F21 /* GMSMarkerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED2A1DA0BCFF006B4F21 /* GMSMarkerExtension.swift */; };
+		B81440D31DA0F285005DE22F /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81440D21DA0F285005DE22F /* InfoController.swift */; };
 		B896EFAA1DA02D400094DA89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896EFA91DA02D400094DA89 /* AppDelegate.swift */; };
 		B896EFAC1DA02D400094DA89 /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896EFAB1DA02D400094DA89 /* MapsController.swift */; };
 		B896EFAF1DA02D400094DA89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B896EFAD1DA02D400094DA89 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		B80FED241DA0AC53006B4F21 /* NibLoadExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadExtension.swift; sourceTree = "<group>"; };
 		B80FED261DA0B96E006B4F21 /* MapsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsDelegate.swift; sourceTree = "<group>"; };
 		B80FED2A1DA0BCFF006B4F21 /* GMSMarkerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMarkerExtension.swift; sourceTree = "<group>"; };
+		B81440D21DA0F285005DE22F /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
 		B896EFA61DA02D400094DA89 /* TweetPinPointer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetPinPointer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B896EFA91DA02D400094DA89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B896EFAB1DA02D400094DA89 /* MapsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				B80FED281DA0BA0E006B4F21 /* InfoWindow */,
 				B896EFAB1DA02D400094DA89 /* MapsController.swift */,
 				B896EFAD1DA02D400094DA89 /* Main.storyboard */,
+				B81440D21DA0F285005DE22F /* InfoController.swift */,
 				B80A4B271DA07048007BFF99 /* Constant.swift */,
 				B80FED1C1DA09D48006B4F21 /* MarkerCreator.swift */,
 				B80FED2A1DA0BCFF006B4F21 /* GMSMarkerExtension.swift */,
@@ -481,6 +484,7 @@
 				B896EFAC1DA02D400094DA89 /* MapsController.swift in Sources */,
 				B896EFAA1DA02D400094DA89 /* AppDelegate.swift in Sources */,
 				B80A4B281DA07048007BFF99 /* Constant.swift in Sources */,
+				B81440D31DA0F285005DE22F /* InfoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

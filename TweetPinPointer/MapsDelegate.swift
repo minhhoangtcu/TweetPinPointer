@@ -23,4 +23,11 @@ class MapsDelegate: UIViewController, GMSMapViewDelegate {
 //    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
 //        print("tap tap")
 //    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        
+        
+        return true
+    }
 }
