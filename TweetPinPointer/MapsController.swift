@@ -9,20 +9,23 @@
 import UIKit
 import GoogleMaps
 
-class MapsController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
+class MapsController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var locationManager:CLLocationManager!
     var userLati: CLLocationDegrees!
     var userLong: CLLocationDegrees!
+    
     var markerCreator: MarkerCreator!
+    var mapsDelegate: MapsDelegate!
     
     override func viewDidLoad() {
         if (userLati != nil && userLong != nil) {
             loadMapWithCurrentLocation()
         }
         markerCreator = MarkerCreator()
+        mapsDelegate = MapsDelegate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,24 +72,10 @@ class MapsController: UIViewController, GMSMapViewDelegate, CLLocationManagerDel
         let camera = GMSCameraPosition.camera(withLatitude: userLati, longitude: userLong, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
-        mapView.delegate = self
+        mapView.delegate = mapsDelegate
         view = mapView
         
         // create marker here
         markerCreator.createMarker(onMap: mapView, latitude: userLati, longitude: userLong)
     }
-    
-    // MARK: Delegate of InfoWindow. Change its behavior
-    
-    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        let customMarker: TweetInfoWindow = TweetInfoWindow.loadFromNib()
-        customMarker.text.text = marker.title
-        print("here")
-        return customMarker
-    }
-    
-    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        print("tap tap")
-    }
-    
 }
