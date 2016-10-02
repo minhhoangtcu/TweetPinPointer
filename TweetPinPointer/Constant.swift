@@ -21,6 +21,7 @@ struct Constants {
         text: "To be or not to be! Foo bar!",
         isPositive: true,
         positivity: 51.0,
-        negativity: 49.0
+        negativity: 49.0,
+        isTrump: true
     )
 }

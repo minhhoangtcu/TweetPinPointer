@@ -17,4 +17,5 @@ struct Tweet {
     var isPositive: Bool!
     var positivity: Float!
     var negativity: Float!
+    var isTrump: Bool!
 }

@@ -18,7 +18,7 @@ class MarkerCreator {
         let marker = GMSMarker(position: position)
         let customMarker: TweetInfoWindow = TweetInfoWindow.loadFromNib()
         customMarker.text.text = tweet.text
-        // change the image
+        customMarker.changeInterface(isTrump: tweet.isTrump, isPositive: tweet.isPositive)
         // change the color of the text for neg/pos
         
         let icon = UIImage(named: "Marker")!
