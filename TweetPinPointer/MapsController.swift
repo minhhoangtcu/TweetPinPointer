@@ -16,6 +16,7 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     var locationManager:CLLocationManager!
     var userLati: CLLocationDegrees!
     var userLong: CLLocationDegrees!
+    var mapView: GMSMapView!
     
     var markerCreator: MarkerCreator = MarkerCreator()
     var mapsDelegate: MapsDelegate = MapsDelegate()
@@ -63,11 +64,22 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     }
     
     func loadMapWithCurrentLocation() {
+        /*
+         Zoom Level:
+         1: World
+         5: Landmass/continent
+         10: City
+         15: Streets
+         20: Buildings
+        */
         let camera = GMSCameraPosition.camera(withLatitude: userLati, longitude: userLong, zoom: 15.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.setMinZoom(7, maxZoom: 20)
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
         view = mapView
+        
+        // Test data
         markerCreator.mapView = mapView
         markerCreator.createMaker(withTweet: Constants.testTweet1)
         markerCreator.createMaker(withTweet: Constants.testTweet2)
@@ -76,7 +88,29 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     }
     
     
+    // MARK: Find radius of current zoom level
+    
+    func getTopCenterCoordinate() -> CLLocationCoordinate2D {
+        // to get coordinate from CGPoint of your map
+        let topCenterCoor = mapView.convert(CGPoint(x: mapView.frame.size.width / 2.0, y: 0), from: mapView)
+        let point = mapView.projection.coordinate(for: topCenterCoor)
+        return point
+    }
+    
+    func getRadius(centerLocation :CLLocation) -> CLLocationDistance {
+        let topCenterCoordinate = getTopCenterCoordinate()
+        let topCenterLocation = CLLocation(latitude: topCenterCoordinate.latitude, longitude: topCenterCoordinate.longitude)
+        let radius = CLLocationDistance(centerLocation.distance(from: topCenterLocation))
+        return round(radius)
+    }
+    
     // MARK: MAP DELEGATE
+    
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        let centerLocation = CLLocation(latitude: position.target.latitude, longitude: position.target.longitude)
+        let radius = getRadius(centerLocation: centerLocation)
+        print("lati: \t\(position.target.latitude) \tlong: \t\(position.target.longitude) \tradius: \(radius) (m)")
+    }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         performSegue(withIdentifier: Constants.SegueIdentifiers.ToInfo, sender: marker)
