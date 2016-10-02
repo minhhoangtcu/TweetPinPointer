@@ -74,16 +74,17 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         */
         let camera = GMSCameraPosition.camera(withLatitude: userLati, longitude: userLong, zoom: 15.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.setMinZoom(7, maxZoom: 20)
+        mapView.setMinZoom(5, maxZoom: 20)
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
         view = mapView
-        
-        TweetDataSource.loadTweets(lat: userLati, lng: userLong) {(tweets: [Tweet]) in
-            self.markerCreator.mapView = mapView
-            for tweet in tweets {, lat: self.userLati, lng: self.userLong
-                self.markerCreator.createMaker(withTweet: tweet)
-            }
+    }
+    
+    func setTweets(_ mapview:GMSMapView, lat:CLLocationDegrees, lng: CLLocationDegrees, radius: CLLocationDistance) {
+        TweetDataSource.loadTweets(lat: userLati, lng: userLong, radius: radius) {(tweets: [Tweet]) in
+            self.markerCreator.mapView = self.mapView
+            self.markerCreator.createMaker(withTweet: tweets)
+            print(tweets)
         }
     }
     
@@ -106,10 +107,20 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     
     // MARK: MAP DELEGATE
     
+    var currentTime: TimeInterval {
+        return Date().timeIntervalSince1970 * 1000 // get to miliseconds
+    }
+    var lastTime: TimeInterval?
+    
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        let centerLocation = CLLocation(latitude: position.target.latitude, longitude: position.target.longitude)
-        let radius = getRadius(centerLocation: centerLocation)
-        print("lati: \t\(position.target.latitude) \tlong: \t\(position.target.longitude) \tradius: \(radius) (m)")
+        if (lastTime == nil || currentTime - lastTime! > 5000.0) {
+            let centerLocation = CLLocation(latitude: position.target.latitude, longitude: position.target.longitude)
+            let radius = getRadius(centerLocation: centerLocation)
+            print("lati: \t\(position.target.latitude) \tlong: \t\(position.target.longitude) \tradius: \(radius) (m)")
+            mapView.clear()
+            setTweets(mapView, lat: position.target.latitude, lng: position.target.longitude, radius: radius)
+            lastTime = currentTime
+        }
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {

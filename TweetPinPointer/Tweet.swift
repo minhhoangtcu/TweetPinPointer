@@ -20,18 +20,6 @@ struct Tweet {
     var negativity: Float!
     var isTrump: Bool!
     var date: String!
-
-    func getImage(isTrump: Bool, isPositive: Bool) -> UIImage {
-        switch (isTrump, isPositive) {
-        case (true, true):
-            return UIImage(named: Constants.ImageNames.TrumpHappy)!
-        case (true, false):
-            return UIImage(named: Constants.ImageNames.TrumpSad)!
-        case (false, true):
-            return UIImage(named: Constants.ImageNames.ClintonHappy)!
-        case (false, false):
-            return UIImage(named: Constants.ImageNames.ClintonSad)!
-    }
     
     init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, author: String, text: String,
          isPositive: Bool, positivity: Float, negativity: Float, isTrump: Bool) {
@@ -61,5 +49,18 @@ struct Tweet {
     enum Candidate {
         case trump
         case hillary
+    }
+}
+
+func getImage(isTrump: Bool, isPositive: Bool) -> UIImage {
+    switch (isTrump, isPositive) {
+    case (true, true):
+        return UIImage(named: Constants.ImageNames.TrumpHappy)!
+    case (true, false):
+        return UIImage(named: Constants.ImageNames.TrumpSad)!
+    case (false, true):
+        return UIImage(named: Constants.ImageNames.ClintonHappy)!
+    case (false, false):
+        return UIImage(named: Constants.ImageNames.ClintonSad)!
     }
 }

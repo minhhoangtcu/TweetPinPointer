@@ -18,6 +18,7 @@
 		B80FED2B1DA0BCFF006B4F21 /* GMSMarkerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80FED2A1DA0BCFF006B4F21 /* GMSMarkerExtension.swift */; };
 		B81440D31DA0F285005DE22F /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81440D21DA0F285005DE22F /* InfoController.swift */; };
 		B81440D51DA0FBD4005DE22F /* BorderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81440D41DA0FBD4005DE22F /* BorderUIView.swift */; };
+		B86051C71DA143DB00939672 /* TweetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86051C61DA143DB00939672 /* TweetDataSource.swift */; };
 		B896EFAA1DA02D400094DA89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896EFA91DA02D400094DA89 /* AppDelegate.swift */; };
 		B896EFAC1DA02D400094DA89 /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896EFAB1DA02D400094DA89 /* MapsController.swift */; };
 		B896EFAF1DA02D400094DA89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B896EFAD1DA02D400094DA89 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		B80FED2A1DA0BCFF006B4F21 /* GMSMarkerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMarkerExtension.swift; sourceTree = "<group>"; };
 		B81440D21DA0F285005DE22F /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
 		B81440D41DA0FBD4005DE22F /* BorderUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderUIView.swift; sourceTree = "<group>"; };
+		B86051C61DA143DB00939672 /* TweetDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDataSource.swift; sourceTree = "<group>"; };
 		B896EFA61DA02D400094DA89 /* TweetPinPointer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetPinPointer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B896EFA91DA02D400094DA89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B896EFAB1DA02D400094DA89 /* MapsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				B80FED291DA0BA38006B4F21 /* Support */,
 				B80FED281DA0BA0E006B4F21 /* InfoWindow */,
 				B896EFAB1DA02D400094DA89 /* MapsController.swift */,
+				B86051C61DA143DB00939672 /* TweetDataSource.swift */,
 				B896EFAD1DA02D400094DA89 /* Main.storyboard */,
 				B81440D21DA0F285005DE22F /* InfoController.swift */,
 				B80A4B271DA07048007BFF99 /* Constants.swift */,
@@ -478,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86051C71DA143DB00939672 /* TweetDataSource.swift in Sources */,
 				B80FED1D1DA09D48006B4F21 /* MarkerCreator.swift in Sources */,
 				B81440D51DA0FBD4005DE22F /* BorderUIView.swift in Sources */,
 				B80FED271DA0B96E006B4F21 /* MapsDelegate.swift in Sources */,

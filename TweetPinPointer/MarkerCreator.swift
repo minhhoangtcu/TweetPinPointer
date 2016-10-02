@@ -13,34 +13,42 @@ class MarkerCreator {
     
     var mapView: GMSMapView!
     
-    func createMaker(withTweet tweet: Tweet) {
-        let position = CLLocationCoordinate2DMake(tweet.latitude, tweet.longitude)
-        let marker = GMSMarker(position: position)
-        let customMarker: TweetInfoWindow = TweetInfoWindow.loadFromNib()
-        customMarker.text.text = tweet.text
-        customMarker.changeInterface(isTrump: tweet.isTrump, isPositive: tweet.isPositive)
-        // change the color of the text for neg/pos
+    func createMaker(withTweet tweets: [Tweet]) {
         
         let icon = UIImage(named: Constants.ImageNames.Marker)!
+        let customMarker: TweetInfoWindow = TweetInfoWindow.loadFromNib()
         
         // Create container
         let annotationImage = UIView.init(frame: CGRect(x: 0, y: 0, width: customMarker.frame.size.width, height: customMarker.frame.size.height + icon.size.height))
-        annotationImage.addSubview(customMarker)
-
+        
         // Create icon view and center
         let iconImageView = UIImageView(image: icon)
         iconImageView.backgroundColor = .clear
         iconImageView.frame = CGRect(x: (customMarker.frame.size.width - icon.size.width)/2, y: customMarker.frame.size.height, width: icon.size.width, height: icon.size.height)
-        annotationImage.addSubview(iconImageView)
         
-        // Render image
-        UIGraphicsBeginImageContextWithOptions(annotationImage.frame.size, false, UIScreen.main.scale)
-        if let ctx = UIGraphicsGetCurrentContext() {
-            annotationImage.layer.render(in: ctx)
-            marker.icon = UIGraphicsGetImageFromCurrentImageContext()
+        for tweet in tweets {
+            let position = CLLocationCoordinate2DMake(tweet.latitude, tweet.longitude)
+            let marker = GMSMarker(position: position)
+            
+            customMarker.text.text = tweet.text
+            customMarker.changeInterface(isTrump: tweet.isTrump, isPositive: tweet.isPositive)
+            marker.tweet = tweet
+            marker.map = mapView
+            annotationImage.addSubview(customMarker)
+            annotationImage.addSubview(iconImageView)
+
+            // Render image
+            var renderedIcon: UIImage?
+            
+            UIGraphicsBeginImageContextWithOptions(annotationImage.frame.size, false, UIScreen.main.scale)
+            if let ctx = UIGraphicsGetCurrentContext() {
+                annotationImage.layer.render(in: ctx)
+                renderedIcon = UIGraphicsGetImageFromCurrentImageContext()
+            }
+            if renderedIcon != nil {
+                marker.icon = renderedIcon
+            }
+            
         }
-    
-        marker.tweet = tweet
-        marker.map = mapView
     }
 }

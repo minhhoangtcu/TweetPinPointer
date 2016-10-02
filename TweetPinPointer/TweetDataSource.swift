@@ -27,12 +27,12 @@ class TweetDataSource {
 
     // MARK: - Tweets
     
-    class func loadTweets(lat: CLLocationDegrees, lng: CLLocationDegrees, completion: @escaping ([Tweet]) -> Void) {
+    class func loadTweets(lat: CLLocationDegrees, lng: CLLocationDegrees, radius: CLLocationDistance, completion: @escaping ([Tweet]) -> Void) {
         var requestUrl = "\(Constants.API_URL)/"
         requestUrl += "tweets"
         
         // Temporary. Just need to test the method.
-        let radius = 100
+        //let radius = 100
         
         loadJSONData(url: requestUrl,
                      params: [
