@@ -29,7 +29,7 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: Constants.ImageNames.InfoButton),
                                                             style: .plain,
                                                             target: self, action: #selector(infoButtonPressed))
-        navigationItem.rightBarButtonItem?.tintColor = .black
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
     }
     
     // MARK: Determine current location once.
