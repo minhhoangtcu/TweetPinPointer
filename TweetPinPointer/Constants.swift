@@ -34,7 +34,8 @@ struct Constants {
         isPositive: true,
         positivity: 51.0,
         negativity: 49.0,
-        isTrump: true
+        isTrump: true,
+        date: "10/01/2016"
     )
     
     static let testTweet2 = Tweet(
@@ -45,7 +46,8 @@ struct Constants {
         isPositive: true,
         positivity: 100.0,
         negativity: 0.0,
-        isTrump: false
+        isTrump: false,
+        date: "10/01/2016"
     )
 
     static let testTweet3 = Tweet(
@@ -56,7 +58,8 @@ struct Constants {
         isPositive: false,
         positivity: 33.0,
         negativity: 67.0,
-        isTrump: true
+        isTrump: true,
+        date: "10/01/2016"
     )
 
     static let testTweet4 = Tweet(
@@ -67,6 +70,7 @@ struct Constants {
         isPositive: false,
         positivity: 20.0,
         negativity: 80.0,
-        isTrump: false
+        isTrump: false,
+        date: "10/01/2016"
     )
 }

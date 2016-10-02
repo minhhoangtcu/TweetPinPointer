@@ -122,12 +122,12 @@
                             <constraint firstItem="r7R-0o-B4b" firstAttribute="top" secondItem="I7B-2X-eL4" secondAttribute="top" constant="476" id="7M2-uT-iqq"/>
                             <constraint firstItem="iZq-YS-Sec" firstAttribute="leading" secondItem="I7B-2X-eL4" secondAttribute="leadingMargin" constant="107" id="7Zb-bj-95b"/>
                             <constraint firstItem="PLe-1B-NPC" firstAttribute="top" secondItem="r7R-0o-B4b" secondAttribute="bottom" constant="70" id="8jc-hm-PnU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jiM-P5-ol6" secondAttribute="trailing" constant="131" id="B8S-dJ-IyZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jiM-P5-ol6" secondAttribute="trailing" constant="45" id="B8S-dJ-IyZ"/>
                             <constraint firstItem="r7R-0o-B4b" firstAttribute="leading" secondItem="I7B-2X-eL4" secondAttribute="leadingMargin" constant="40" id="Dd9-Or-MZb"/>
                             <constraint firstItem="iZq-YS-Sec" firstAttribute="top" secondItem="cLB-XE-YvH" secondAttribute="bottom" constant="60" id="Hy8-Iv-ud8"/>
                             <constraint firstItem="dBR-bx-YYL" firstAttribute="centerX" secondItem="I7B-2X-eL4" secondAttribute="centerX" id="QLW-k8-fMs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r7R-0o-B4b" secondAttribute="trailing" constant="40" id="QME-oH-0Lj"/>
-                            <constraint firstItem="jiM-P5-ol6" firstAttribute="leading" secondItem="I7B-2X-eL4" secondAttribute="leadingMargin" constant="131" id="c5Q-tM-Wyu"/>
+                            <constraint firstItem="jiM-P5-ol6" firstAttribute="leading" secondItem="I7B-2X-eL4" secondAttribute="leadingMargin" constant="45" id="c5Q-tM-Wyu"/>
                             <constraint firstItem="jiM-P5-ol6" firstAttribute="top" secondItem="iZq-YS-Sec" secondAttribute="bottom" constant="20" id="nwG-MQ-YjL"/>
                             <constraint firstItem="dBR-bx-YYL" firstAttribute="leading" secondItem="I7B-2X-eL4" secondAttribute="leadingMargin" constant="40" id="q8F-83-eqA"/>
                             <constraint firstItem="PLe-1B-NPC" firstAttribute="top" secondItem="iZq-YS-Sec" secondAttribute="bottom" constant="415" id="ro8-Dn-Udi"/>

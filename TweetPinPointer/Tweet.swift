@@ -18,6 +18,7 @@ struct Tweet {
     var positivity: Float!
     var negativity: Float!
     var isTrump: Bool!
+    var date: String!
 }
 
 func getImage(isTrump: Bool, isPositive: Bool) -> UIImage {

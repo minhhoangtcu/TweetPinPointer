@@ -24,9 +24,16 @@ class InfoController:  UIViewController {
     var tweet: Tweet!
     
     override func viewDidLoad() {
+        // Border not showing?
         borderTop.addBottomBorderWithColor(color: .black, width: 10.0)
         borderDown.addBottomBorderWithColor(color: .black, width: 10.0)
+        
         icon.image = getImage(isTrump: tweet.isTrump, isPositive: tweet.isPositive)
+        authorLabel.text = tweet.author
+        dateLabel.text = tweet.date
+        text.text = tweet.text
+        positivityLabel.text = String(tweet.positivity)
+        negativityLabel.text = String(tweet.negativity)
     }
     
 }

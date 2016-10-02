@@ -17,20 +17,14 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     var userLati: CLLocationDegrees!
     var userLong: CLLocationDegrees!
     
-    var markerCreator: MarkerCreator!
-    var mapsDelegate: MapsDelegate!
-    
-    override func viewDidLoad() {
-        if (userLati != nil && userLong != nil) {
-            loadMapWithCurrentLocation()
-        }
-        markerCreator = MarkerCreator()
-        mapsDelegate = MapsDelegate()
-    }
+    var markerCreator: MarkerCreator = MarkerCreator()
+    var mapsDelegate: MapsDelegate = MapsDelegate()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        determineMyCurrentLocation()
+        if (userLati == nil && userLong == nil) {
+            determineMyCurrentLocation()
+        }
     }
     
     // MARK: Determine current location once.
