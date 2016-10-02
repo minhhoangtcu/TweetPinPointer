@@ -84,7 +84,7 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     }
     
     func infoButtonPressed() {
-        
+        performSegue(withIdentifier: Constants.SegueIdentifiers.ToAbout, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -94,6 +94,8 @@ class MapsController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
                 let marker = sender as! GMSMarker
                 let infoController = segue.destination as! InfoController
                 infoController.tweet = marker.tweet
+            case Constants.SegueIdentifiers.ToAbout:
+                break // do nothing. really.
             default:
             break
             }

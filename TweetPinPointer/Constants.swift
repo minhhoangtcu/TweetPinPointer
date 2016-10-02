@@ -16,6 +16,7 @@ struct Constants {
     
     struct SegueIdentifiers {
         static let ToInfo = "ShowInfo"
+        static let ToAbout = "ShowAbout"
     }
     
     struct ImageNames {
