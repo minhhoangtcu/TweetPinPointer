@@ -13,13 +13,13 @@ class MapsDelegate: UIViewController, GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         let customMarker: TweetInfoWindow = TweetInfoWindow.loadFromNib()
-        customMarker.text.text = marker.title
-        print("here")
+        customMarker.text.text = marker.tweet.text
+        // change the image
+        // change the color of the text for neg/pos
         return customMarker
     }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         print("tap tap")
     }
-    
 }

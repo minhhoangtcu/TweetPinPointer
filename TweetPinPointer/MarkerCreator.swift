@@ -11,16 +11,12 @@ import GoogleMaps
 
 class MarkerCreator {
     
-    // CLLocationDegrees is basically Double
-    func createMarker(onMap mapView: GMSMapView, latitude lati: CLLocationDegrees, longitude long: CLLocationDegrees) {
-        let position = CLLocationCoordinate2DMake(lati, long)
+    var mapView: GMSMapView!
+    
+    func createMaker(withTweet tweet: Tweet) {
+        let position = CLLocationCoordinate2DMake(tweet.latitude, tweet.longitude)
         let marker = GMSMarker(position: position)
-        marker.title = "Hello World"
+        marker.tweet = tweet
         marker.map = mapView
     }
-    
-    func createMaker(onMap mapView: GMSMapView, withTweet tweet: Tweet) {
-        
-    }
-    
 }

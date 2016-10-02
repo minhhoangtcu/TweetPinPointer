@@ -10,8 +10,8 @@ import Foundation
 import GoogleMaps
 
 struct Tweet {
-    var longitude: CLLocationDegrees!
     var latitude: CLLocationDegrees!
+    var longitude: CLLocationDegrees!
     var author: String!
     var text: String!
     var isPositive: Bool!

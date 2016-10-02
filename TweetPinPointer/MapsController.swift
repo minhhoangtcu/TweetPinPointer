@@ -32,7 +32,6 @@ class MapsController: UIViewController, CLLocationManagerDelegate {
         super.viewWillAppear(animated)
         determineMyCurrentLocation()
     }
-
     
     // MARK: Determine current location once.
 
@@ -59,9 +58,6 @@ class MapsController: UIViewController, CLLocationManagerDelegate {
         userLati = userLocation.coordinate.latitude
         userLong = userLocation.coordinate.longitude
         loadMapWithCurrentLocation()
-        
-        print("user latitude = \(userLocation.coordinate.latitude)")
-        print("user longitude = \(userLocation.coordinate.longitude)")
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -74,8 +70,7 @@ class MapsController: UIViewController, CLLocationManagerDelegate {
         mapView.isMyLocationEnabled = true
         mapView.delegate = mapsDelegate
         view = mapView
-        
-        // create marker here
-        markerCreator.createMarker(onMap: mapView, latitude: userLati, longitude: userLong)
+        markerCreator.mapView = mapView
+        markerCreator.createMaker(withTweet: Constants.testTweet1)
     }
 }
